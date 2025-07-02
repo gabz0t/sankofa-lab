@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | Sankofa Lab</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/inicio.js" defer></script>
+    <script src="assets/js/carrinho.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="kv-ee-menu kv-ee-menu-item-wrapper" data-dynamic-navigation-element="nav">
+                <li><a href="index.html" data-uri-path="/" target="_self">Início</a></li>
+                <li><a href="sobre.html" data-uri-path="/sobre" target="_self">Sobre</a></li>
+                <li><a href="contato.html" data-uri-path="/contato" target="_self">Contato</a></li>
+                <li><a href="loja.html" data-uri-path="/loja" target="_self">Loja</a></li>
+            </ul>
+            <div class="kv-ee-callbutton" data-dynamic-navigation-element="calltoactionbutton">
+                <div class="kv-ee-custom-header-buttons">
+                    <a class="kv-ee-button-lg kv-ee-button-callToAction kv-ee-button-dynamic-buttons kv-button-instant-edit kv-ee-button-primary" data-index="0" data-type="button" tabindex="0" data-href="https://wa.me/5551980318374" href="https://wa.me/5551980318374" target="_blank" data-property="global.callToAction">
+                        <i class="fa fa-whatsapp"></i>
+                        <div class="kv-ee-button-has-title">Peça pelo Whatsapp</div>
+                    </a>
+                    <a id="custom-header-button-template" class="kv-ee-button-cart kv-ee-button-background kv-ee-button-primary"></a>
+                </div>
+            </div>
+            <div class="kv-menu"><div class="kv-ee-menu-icon"><div></div><div></div><div></div></div></div>
+        </nav>
+    </header>
+    <main>
+        <section class="produto-destaque">
+            <div class="produto-imagem">
+                <img src="https://images.unsplash.com/photo-1494261951946-b0c26b70410c?auto=format&fit=crop&w=500&q=60" alt="Super cool new thing!">
+            </div>
+            <div class="produto-info">
+                <h1>Super cool new thing!</h1>
+                <p class="produto-preco"><span class="preco-antigo">R$ 63,00</span> <span class="preco-atual">R$ 58,33</span> <span class="desconto">10% OFF</span></p>
+                <p class="produto-descricao">Este produto é novo, moderno e perfeito para você. Aproveite a novidade e garanta já o seu!</p>
+                <form class="produto-compra" onsubmit="event.preventDefault(); addToCart({id: '0001', nome: 'Super cool new thing!', preco: 58.33, quantidade: parseInt(document.getElementById('quantidade').value)}); alert('Produto adicionado ao carrinho!');">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" value="1">
+                    <button type="submit" class="btn-comprar">Comprar</button>
+                </form>
+                <button onclick="checkoutWhatsApp()" class="btn-finalizar">Finalizar compra pelo WhatsApp</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
